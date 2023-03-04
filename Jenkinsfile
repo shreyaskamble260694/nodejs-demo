@@ -12,7 +12,13 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t valaxy/nodeapp:$BUILD_NUMBER .'
+                sh 'docker build -t shyam .'
+            }
+        }
+        
+         stage('Build conatiner container') {
+            steps {  
+                sh 'docker run -td shreyas shyam /bin/bash .'
             }
         }
         stage('login to dockerhub') {
