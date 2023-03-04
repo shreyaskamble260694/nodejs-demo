@@ -18,7 +18,7 @@ pipeline {
         
          stage('Build conatiner container') {
             steps {  
-                sh 'docker run -it --name shreyas125 shyam /bin/bash'
+                sh 'docker run -id --name shiva11 shyam /bin/bash'
             }
         }
         stage('login to dockerhub') {
