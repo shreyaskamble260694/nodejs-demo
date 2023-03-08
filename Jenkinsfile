@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent {label "deployment"} 
     environment {
     DOCKERHUB_CREDENTIALS = credentials('valaxy-dockerhub')
     }
